@@ -9,8 +9,8 @@
             <RowDefinition />
             <RowDefinition />
         </Grid.RowDefinitions>
-        <VerticalStackLayout Grid.Row="1" HorizontalOptions="Center">
-            <Grid Margin="30,0" RowSpacing="20">
+        <VerticalStackLayout Grid.Row="1" HorizontalOptions="Center" VerticalOptions="Center">
+            <Grid RowSpacing="20">
                 <Grid.RowDefinitions>
                     <RowDefinition />
                     <RowDefinition />
