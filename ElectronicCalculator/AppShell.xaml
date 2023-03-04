@@ -12,11 +12,11 @@
 			Icon="iconblank.png"
 			ContentTemplate="{DataTemplate views:HomePage}" />
 		<ShellContent
-			Title="Voltage"
+			Title="Voltage Regulator"
 			Icon="iconblank.png"
 			ContentTemplate="{DataTemplate views:VoltagePage}" />
 		<ShellContent
-			Title="Constant"
+			Title="CCR"
 			Icon="iconblank.png"
 			ContentTemplate="{DataTemplate views:ConstantPage}" />
 		<ShellContent

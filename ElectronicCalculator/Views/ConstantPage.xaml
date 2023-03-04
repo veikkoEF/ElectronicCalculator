@@ -4,5 +4,61 @@
 			 xmlns:vm="clr-namespace:ElectronicCalculator.ViewModels"
 			 x:Class="ElectronicCalculator.Views.ConstantPage"
 			 x:DataType="vm:ConstantViewModel">
+    <Grid BackgroundColor="LightGray">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <VerticalStackLayout Grid.Row="1" HorizontalOptions="Center">
+            <Grid Margin="30,0" RowSpacing="20">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition  />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Label
+                    Grid.Row="1"
+                    HorizontalOptions="Start" Margin="30,0" MaximumWidthRequest="100"
+                    Text="Power los:"
+                    VerticalOptions="Center" />
+                <Entry Grid.Column="1" Text="12.5" HorizontalTextAlignment="Center" VerticalOptions="Center" />
+                <RadioButton
+                    Grid.Row="0"
+                    Content="Resistor R1:"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Center" />
+                <Entry
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    MinimumWidthRequest="150"
+                    VerticalOptions="Center" />
+                <RadioButton
+                    Grid.Row="2"
+                    Margin="0,0,20,0"
+                    Content="Output current:"
+                    IsChecked="True"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Center" />
+                <Entry
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    VerticalOptions="Center" />
+                <Button  Grid.Row="3" Grid.Column="1" Text="Calculation"/>
+            </Grid>
+        </VerticalStackLayout>
+        <VerticalStackLayout Margin="20" VerticalOptions="Center">
+            <Border >
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="20" />
+                </Border.StrokeShape>
+                <Image Aspect="AspectFit"   Source="lm317b.jpg" />
+            </Border>
+        </VerticalStackLayout>
+    </Grid>
 
 </ContentPage>
