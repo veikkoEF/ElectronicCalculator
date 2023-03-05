@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-			 xmlns:conv="clr-namespace:ElectronicCalculator.Converters"
-			 xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
-			 xmlns:vm="clr-namespace:ElectronicCalculator.ViewModels"
-			 x:Class="ElectronicCalculator.Views.InfoPage"
-			 x:DataType="vm:InfoViewModel">
-	<Grid RowDefinitions="*,Auto">
-		<WebView x:Name="webview" Source="https://google.com"/>
-		
-	</Grid>
+<ContentPage
+    x:Class="ElectronicCalculator.Views.InfoPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:conv="clr-namespace:ElectronicCalculator.Converters"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:vm="clr-namespace:ElectronicCalculator.ViewModels"
+    x:DataType="vm:InfoViewModel">
+    <Grid RowDefinitions="*,Auto">
+        <WebView x:Name="webview" Source="https://pdf1.alldatasheetde.com/datasheet-pdf/view/1317223/TGS/LM317.html"></WebView>
+    </Grid>
 </ContentPage>

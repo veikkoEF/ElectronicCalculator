@@ -5,58 +5,79 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:vm="clr-namespace:ElectronicCalculator.ViewModels"
     x:DataType="vm:VoltageViewModel">
-    <Grid  BackgroundColor="LightGray">
+    <Grid BackgroundColor="LightGray">
         <Grid.RowDefinitions>
             <RowDefinition />
-            <RowDefinition  />
+            <RowDefinition />
         </Grid.RowDefinitions>
-        <VerticalStackLayout Grid.Row="1" HorizontalOptions="Center" VerticalOptions="Center">
+        <VerticalStackLayout
+            Grid.Row="1"
+            HorizontalOptions="Center"
+            VerticalOptions="Center">
             <Grid RowSpacing="20">
                 <Grid.RowDefinitions>
                     <RowDefinition />
                     <RowDefinition />
                     <RowDefinition />
-                    <RowDefinition  />
+                    <RowDefinition />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
                 <Label
-                    HorizontalOptions="Start" Margin="30,0" MaximumWidthRequest="100"
+                    Margin="30,0"
+                    HorizontalOptions="Start"
+                    MaximumWidthRequest="100"
                     Text="Resistor R1 (240 Ohm):"
                     VerticalOptions="Center" />
-                <Entry Grid.Column="1" Text="240" HorizontalTextAlignment="Center" VerticalOptions="Center" />
+                <Entry
+                    Grid.Column="1"
+                    HorizontalTextAlignment="Center"
+                    Text="{Binding Resistor1, Mode=TwoWay}"
+                    VerticalOptions="Center" />
                 <RadioButton
+                    x:Name="RadioButtonR2"
                     Grid.Row="1"
+                    CheckedChanged="RadioButton_CheckedChanged"
                     Content="Resistor R2:"
                     HorizontalOptions="Start"
                     VerticalOptions="Center" />
                 <Entry
+                    x:Name="EntryR2"
                     Grid.Row="1"
                     Grid.Column="1"
                     MinimumWidthRequest="150"
+                    Text="{Binding Resistor2, Mode=TwoWay}"
                     VerticalOptions="Center" />
                 <RadioButton
+                    x:Name="RadioButtonVoltage"
                     Grid.Row="2"
                     Margin="0,0,20,0"
-                    IsChecked="True"
                     Content="Output voltage:"
                     HorizontalOptions="Start"
+                    IsChecked="True"
                     VerticalOptions="Center" />
                 <Entry
+                    x:Name="EntryVoltage"
                     Grid.Row="2"
                     Grid.Column="1"
+                    IsReadOnly="True"
+                    Text="{Binding Voltage, Mode=TwoWay}"
                     VerticalOptions="Center" />
-                <Button  Grid.Row="3" Grid.Column="1" Text="Calculation"/>
+                <Button
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    Command="{Binding CalculateCommand}"
+                    Text="Calculation" />
             </Grid>
         </VerticalStackLayout>
         <VerticalStackLayout Margin="20" VerticalOptions="Center">
-            <Border >
+            <Border>
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="20" />
                 </Border.StrokeShape>
-                <Image Aspect="AspectFit"   Source="lm317c.jpg" />
+                <Image Aspect="AspectFit" Source="lm317c.jpg" />
             </Border>
         </VerticalStackLayout>
     </Grid>
